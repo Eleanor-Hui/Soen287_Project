@@ -11,9 +11,9 @@ git switch "branch-name"        //switch branch
 <br />
 
 """<br />
-git add . 
+git add .           //add all files
 
-git commit -m"your message"
+git commit -m"your message"        //then commit your files
 
-git push origin "branch-name"       //push to your branch
+git push origin "branch-name"       //then push to your github online branch
 <br />"""
