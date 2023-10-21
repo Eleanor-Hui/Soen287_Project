@@ -6,15 +6,14 @@ git branch       //check what branch you are in
 
 git switch "branch-name"        //switch branch
 
+<br />
+<br />
+<br />
 
-
-
-
-
-"""
+"""<br />
 git add . 
 
 git commit -m"your message"
 
 git push origin "branch-name"       //push to your branch
-"""
+<br />"""
