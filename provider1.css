@@ -6,6 +6,11 @@
     position: fixed;
     height: 100%;
     overflow: auto;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.dashboard:hover {
+    background-color: rgba(197, 189, 189, 0.7); /* Adjust the alpha channel to control opacity */
 }
 
 .sidebar a {
