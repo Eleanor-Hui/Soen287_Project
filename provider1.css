@@ -2,7 +2,7 @@
 
 .navbar {
     list-style-type: none;
-    margin: 0;
+    margin-left: 0;
     
     
   }
@@ -15,8 +15,8 @@
 .navbar a{
 
     position: fixed;
-    top:10;
-    right:20px;
+    top:2px;
+    right:10px;
     padding: 10px;
 
 }
@@ -32,14 +32,13 @@
 }
 
 
-/**/
+/*side bar*/
 
 .sidebar {
     margin: 0;
     padding: 0;
     width: 200px;
     background-color: #f1f1f1;
-    position: fixed;
     height: 100%;
     overflow: auto;
     transition: background-color 0.3s, opacity 0.3s;
