@@ -1,3 +1,39 @@
+/* navbar styling*/
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    
+    
+  }
+
+.navbar ul{
+
+    display: flex;
+}
+
+.navbar a{
+
+    position: fixed;
+    top:10;
+    right:20px;
+    padding: 10px;
+
+}
+
+.navbar a img{
+
+    width:40px;
+    height:auto;
+}
+
+.navbar-text{
+    margin-right: 30px;
+}
+
+
+/**/
+
 .sidebar {
     margin: 0;
     padding: 0;
@@ -44,7 +80,7 @@ form {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #037cfd;
     color: white;
     padding: 8px 16px;
     border: none;
