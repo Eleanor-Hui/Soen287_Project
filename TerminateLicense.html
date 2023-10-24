@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+           Terminate a License
+        </title>
+        <link rel="stylesheet" href="RenewLicenseStyle.css"/>
+        <script>
+            function handleSelectChange(selectElement, customInputId) {
+                var customNameInput = document.getElementById(customInputId);
+
+                //use strict equality comparison
+                if (selectElement.value === 'Other') {
+                    customNameInput.style.display = 'block'; // Show the input field
+                } else {
+                    customNameInput.style.display = 'none'; // Hide the input field
+                }
+        }
+            // Call the function for software name and reasons
+            handleSelectChange(document.getElementById('name'), 'customNameInput');         //call the function for customized name input
+            handleSelectChange(document.getElementById('reasons'), 'customReasonInput');    //call the function for customized reasons input
+        </script>
+    </head>
+
+   
+   <body>
+    <!-- Navigation?-->
+    <nav ID="mainNav">
+        <a href="">HOME</a>
+        <a href="">TEAM</a>
+        <a href="">CONTACT</a>
+    </nav>
+
+    <div class="sidebar">
+        <header>My Software License</header>
+        <ul>
+         <li><a href="">Profile</a></li>
+         <li><a href="">Link a License</a></li>
+         <li><a href="LicenseInfo.html">License Info</a></li>   
+         <li><a href="NewLicense.html">License Application</a></li>
+         <li><a href="RenewLicense.html">Renew a License</a></li>
+         <li><a href="TerminateLicense.html">Terminate a License</a></li>
+         <li><a href="" class="logout">Logout</a></li>    
+        </ul>
+    </div>
+
+    <body>
+    <div id="title">
+            <h1> <br><br>Terminate a License<br><br><br><br></h1>
+           </div>
+
+    <form action="/submit" method="post">
+        <h3>I would like to terminate the folling license:</h3>
+
+    <label for="name">Software name:</label><br>
+    <select class="userInput" id="name" name="name" onchange="handleSelectChange(this, 'customNameInput')" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="ms">Microsoft Office</option>
+        <option value="vscode">Visual Studio Code</option>
+        <option value="intelliJ">IntelliJ</option>
+        <option value="Other">Other</option>
+    </select><br><br>
+    <!-- Input field for custom option -->
+    <div id="customNameInput" style="display: none">
+        <label for="customNameOption">Enter a your option:</label>
+        <input class="userInput" type="text" id="customNameOption" placeholder="Enter the software name" required><br><br>
+    </div>
+
+    <label for="date">Effective date:</label>
+    <select class="userInput" id="date" name="date" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="now">I would like to cancel the license immediately.</option>
+        <option value="sub">I would like to terminate it when this subscription ends.</option>
+    </select><br><br>
+
+    <label for="reasons">Reasons for the termination:</label>
+    <select class="userInput" id="reasons" name="reasons" onchange="handleSelectChange(this, 'customReasonInput')" required>
+        <option disabled selected value> -- select an option -- </option>
+        <option value="noNeed">I no longer need the softwre</option>
+        <option value="otherOpt">I found a better option</option>
+        <option value="Other">Other</option>
+    </select> <br><br>
+    <!-- Input field for custom reason -->
+    <div id="customReasonInput" style="display: none">
+    <label for="customReason">Enter your reasons:</label>
+    <input class="userInput" type="text" id="customReason" placeholder="Enter your reason" required><br><br>
+    </div>
+    
+    <input id="submit" type="submit" value="Submit" onclick="confirmSubmission()">
+</form>
+<!--poop-up window for subscribing successfully-->
+<script>
+    function confirmSubmission() {
+      alert("Your application has been submitted successfully!");
+    }
+    </script>
+
+
+    </body>
+</html>
