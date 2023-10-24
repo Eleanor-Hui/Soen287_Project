@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Software License Management</title>
+	<link rel="stylesheet" type="text/css" href="provider1.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+	<nav class="navbar">
+		<h2  style="display: inline;">Software License Management</h2>
+		<ul>
+		
+		<a href="#">
+			<span>John Doe</span>
+			<img src="profile_pic.png" alt="Icon">
+		</a>
+	
+		</ul>
+	</nav>
+	<div class="sidebar">
+		<a class="dashboard" href="#home">Dashboard</a>
+
+	  </div>
+
+	<div class="content">
+		<h2>Customer Accounts</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Customer Name</th>
+					<th>Email</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John Doe</td>
+					<td>john.doe@example.com</td>
+					<td>Active</td>
+					<td>
+						<form action="">
+							<input type="submit" value="Edit">
+						</form>
+						<form action="">
+							<input type="submit" value="Disable">
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>Jane Doe</td>
+					<td>jane.doe@example.com</td>
+					<td>Inactive</td>
+					<td>
+						<form action="">
+							<input type="submit" value="Activate">
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>License Numbers</h2>
+		<form class="license_numbers" action="">
+			<label for="customer-name">Customer Name:</label>
+			<input type="text" id="customer-name" name="customer-name"><br><br>
+			<label for="product-name">Product Name:</label>
+			<input type="text" id="product-name" name="product-name"><br><br>
+			<input type="submit" value="Generate License Number">
+		</form>
+		<form class="license_numbers" action="">
+			<label for="customer-name">Customer Name:</label>
+			<input type="text" id="customer-name" name="customer-name"><br><br>
+			<label for="license-number">License Number:</label>
+			<input type="text" id="license-number" name="license-number"><br><br>
+			<input type="submit" value="Associate License Number">
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>License Number</th>
+					<th>Customer Name</th>
+					<th>Product Name</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>AB202310JD1234567890</td>
+					<td>John Doe</td>
+					<td>Product A</td>
+					<td>Active</td>
+					<td>
+						<form action="">
+							<input type="submit" value="Activate">
+						</form>
+						<form action="">
+							<input type="submit" value="Unlock">
+						</form>
+						<form action="">
+							<input type="submit" value="Disable">
+						</form>
+						<form action="">
+							<input type="submit" value="Lock">
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>CD202311JD0987654321</td>
+					<td>Jane Doe</td>
+					<td>Product B</td>
+					<td>Inactive</td>
+					<td>
+						<form action="">
+							<input type="submit" value="Activate">
+						</form>
+						<form action="">
+							<input type="submit" value="Unlock">
+						</form>
+						<form action="">
+							<input type="submit" value="Disable">
+						</form>
+						<form action="">
+							<input type="submit" value="Lock">
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Notifications</h2>
+		<form action="">
+			<p>Choose type of notification:</p>
+			<input type="radio" id="renewal" name="notification" value="">
+			<label for="renewal">Renewal</label><br>
+
+			<input type="radio" id="expiry date" name="notification" value="">
+			<label for="expiry date">Expiry Date</label><br>
+
+			<form>
+			<input type="text" id="name" name="name" placeholder="Email">
+			<input type="submit" value="Submit">
+			</form>
+			<br><br><br><br><br><br><br>
+	</div>
+	
