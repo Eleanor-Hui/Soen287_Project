@@ -75,7 +75,14 @@ tr:hover {
 
 form {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 35px;
+    
+}
+
+.license_numbers{
+
+    padding:10px;
+
 }
 
 input[type="submit"] {
