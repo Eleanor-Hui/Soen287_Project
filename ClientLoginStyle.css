@@ -1,0 +1,97 @@
+#title {
+     text-align: center;
+     color:#fff;
+}
+body {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80%;
+    background-image: url("background.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    backdrop-filter: blur(3px);
+   }
+#mainNav { 
+     width: 85%;
+     margin: auto;
+     padding: 35px 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+#mainNav ul li{
+     list-style-type:none;
+     display: inline-block;
+     margin: 0 20px;
+     position: relative;
+ }
+#mainNav ul li a{
+     text-decoration: none;
+     color:#fff;
+     text-transform: uppercase;
+ }
+ #mainNav ul li::after{
+     content: "";
+     height:3px;
+     width: 0;
+     background: #009688;
+     position: absolute;
+     left:0;
+     bottom: -10px;
+     transition: 0.5s;
+ }
+ 
+ #mainNav ul li:hover::after{
+     width: 100%;
+ 
+ }
+
+#login {
+     background-color: white;
+     text-align: center; 
+     font-family: 'Times New Roman', Times, serif; 
+     border:solid black 1px; 
+     padding:10px; 
+     border-spacing: 10px;
+     height: 450px; 
+     width:600px;   
+     display: block;}
+.loginBox {
+     background-color: antiquewhite; 
+     text-align: center; 
+     border:solid black 1px; 
+     padding:10px; 
+     border-spacing: 10px; 
+     height: 60px; 
+     width: 400px; 
+     margin-left: 18%; 
+     display: block;
+     justify-content: center; 
+     align-items:center; 
+     padding-top: 16px; 
+     padding-bottom: 16px;} 
+#loginButton {
+     background-color: #4CAF50; 
+     color: white; 
+     padding: 10px 20px; 
+     border: none; 
+     border-radius: 4px; 
+     font-size: 16px; 
+     cursor:pointer;}
+#loginButton:hover { background-color: #45a049;}
+
+#forgetPW {
+     font-size: 16px;
+     transition: text-decoration 1ms;
+}
+#forgetPW:hover {
+     text-decoration: underline;
+     color:darkblue;
+}
+#resetPW {
+     font-weight: normal;
+     color:#45a049;
+}
+ 
