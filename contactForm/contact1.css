@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background-image: url("background.JPG");
+    
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    
+    
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: "";
+    height:3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+
+.separate{
+    float: left;
+    width: 50%;
+}
+
+.column{
+    
+    width: 100%;
+    height: 100vh;
+}
+.contact-text{
+margin-top: 100px;
+margin-left: 50px;
+}
+
+.contact-text h1{
+    font-size: 4vw;
+    margin-left: auto;
+}
+.contact-text p{
+    margin-top: 20px;
+    font-size: 2vw;
+}
+.businessHour{
+    margin-top: 60px;
+    margin-left: 50px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    box-shadow:  0.3em 0.3em 1em rgba(30, 30, 30, 0.6);
+}
+
+.businessHour h3{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.businessHour p{
+    padding-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.container{
+    float:flex;
+    width:100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separate::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+form{
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form h3{
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    
+}
+
+form input,form textarea{
+    border: 0;
+    margin:10px 0;
+    padding: 20px;
+    outline: none;
+    background:white ;
+    font-size: 16px;
+
+}
+
+form button{
+    padding: 15px;
+    background:orange ;
+    color:white;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+
+}
+
+footer{
+    position:relative;
+    bottom: 0;
+    left: 0;
+    background: rgba(135, 135, 135, 0.8);
+    
+    width: 100vw;
+    font-family:sans-serif;
+    padding-top:10px;
+    color: black;
+    margin-top: 40px;
+    padding-bottom: 5px;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+.footer-content h3{
+    text-transform: capitalize;
+    line-height: 1;
+    font-weight: bold;
+    font-size:12px ;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 0.5;
+    font-size: 8px;
+    
+}
