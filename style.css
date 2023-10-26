@@ -1,0 +1,157 @@
+body {
+    background-color: #f0f0f0;
+    padding:0;
+    margin:0;
+    height:100vh;
+}
+
+#container {
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    height:100%;
+    position: relative;
+    top:0;
+    margin: 0;
+    overflow: hidden;
+}
+#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') center/cover no-repeat;
+    filter: blur(10px); 
+}
+#mainNav { 
+    height:136px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 35px 0;
+    margin-top: 0;
+    margin-right:0;
+  
+    background-color: #fff;
+
+    position: relative;
+    background: transparent;
+}
+#mainNav ul {
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    padding: 0;
+}
+#mainNav ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+#mainNav ul li a{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+}
+#mainNav ul li::after{
+    content: "";
+    height:3px;
+    width: 0;
+    background: rgb(173, 216, 230);
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+#mainNav ul li:hover::after{
+    width: 100%;
+}
+header {
+   color: white;
+   text-align: center;
+   font-size: 48px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+}
+
+#content{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color:#fff;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.login {
+    position:absolute; 
+    top:240px;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    border:solid #CACACA 3px; 
+    border-radius: 30px;
+    border-spacing: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(41, 40, 40, 0.1);
+    display: block;
+    width: 300px;
+    height: 300px;
+    padding: 80px 30px;
+    background-color: #fff;
+    opacity: 0.7;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: black;
+    font-size: 22px;
+}
+#userLogin{
+    left:33%
+}
+#providerLogin {
+    left:52%;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #009688;
+    background: transparent;
+    color:black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #009688;
+    height:100%;
+    width:0%;
+    border-radius:25px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover {
+    border: none;
+}
