@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+            Applying New License
+        </title>
+        <link rel="stylesheet" href="NewLicenseStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+ 
+    <body>
+        <!--side nav bar-->
+        <div class="sidebar">
+            <header>My Software License</header>
+             <a href=""><i class="fa fa-address-book"></i>Profile</a>
+             <a href=""><i class="fa fa-address-card"></i>Link a License</a>
+             <a href="LicenseInfo.html"><i class="fa fa-reorder"></i>License Info</a>
+             <a href="NewLicense.html"><i class="fa fa-paper-plane"></i>License Application</a>
+             <a href="RenewLicense.html"><i class="fa fa-pencil"></i>Renew a License</a>
+             <a href="TerminateLicense.html"><i class="fa fa-exclamation-circle"></i>Terminate a License</a>
+            <a href="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Provider\group_project\welcomepage\welcome.html"><i class="fa fa-sign-out"></i>Logout</a>
+        </div>
+
+        <div id="container">
+            <!--main nav bar-->
+            <nav ID="mainNav">
+                <ul>
+                    <li><a href="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Provider\group_project\welcomepage\welcome.html">HOME</a></li>
+                    <li><a href="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Provider\group_project\AboutUs\aboutUs.html">ABOUT US</a></li>
+                    <li><a href="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Provider\group_project\contactForm\contact1.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <!--Application form-->
+            <div id="content">
+                <header> 
+                    <h1> Apply for a New License<br></h1>
+                </header>
+            <form action="/submit" method="post">
+                <label for="name">Software Name:</label><br>
+                <input class="userInput" type="text" id="name" name="name" placeholder="Microsoft Word" required><br><br>
+        
+                <label for="purpose">Purpose of usage:</label><br>
+                <select class="userInput" id="purpose" name="purpose" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="business">Business</option>
+                <option value="educational">Educational</option>
+                <option value="personal">Personal</option>
+                </select><br><br>
+        
+                <label for="date">Preferred starting date:</label>
+                <input class="userInput" type="date" id="date" name="date" required><br><br>
+        
+                <label for="type">Type of subscription preferred:</label><br>
+                <select class="userInput" id="type" name="type" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="permanent">Permanent</option>
+                <option value="annual">Annual</option>
+                </select><br><br>
+        
+                <label for="payment">Preferred payment method:</label>
+                <select class="userInput" id="payment" name="payment" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="debit/credit">Debit/Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="gift card">Gift Card</option>
+                </select> <br><br>
+                
+                <div id="subButton">
+                    <input id="submit" type="submit" value="Submit" onclick="confirmSubmission()">
+                </div>
+            </form>
+               </div>
+        </div>
+        
+    <!--pop-up window for subscribing successfully-->
+    <script>
+        function confirmSubmission() {
+          alert("Your application has been submitted successfully!");
+        }
+        </script>
+    </body>
+</html>
