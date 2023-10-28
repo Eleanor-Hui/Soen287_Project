@@ -1,15 +1,17 @@
+//restore password
 function forgotPassword() {
     let text;
     let email = prompt("Please enter your email address:", "ABC123@gmail.com");
     if (email == null || email == "") {
-        text = " Cancel";
+        text = "Cancelled";
     } else {
         text = "Recovery email has been sent to the email:" + email + "<br> Please Check your email and follow the instructions.";
     }
     document.getElementById("resetPW").innerHTML = text;
 }
 
-// Check if the "Remember Me" checkbox is checked
+//use remember me box
+//Check if the "Remember Me" checkbox is checked
 var rememberMeCheckbox = document.getElementById("rememberMe");
 var emailInput = document.getElementById("Email");
 var passwordInput = document.getElementById("password");
@@ -36,7 +38,7 @@ if (rememberMeCheckbox) {
     });
 }
 
-
+//eye icon to toggle password visibility
 const forms = document.querySelector(".forms"),
       pwShowHide = document.querySelectorAll(".eye-icon"),
       links = document.querySelectorAll(".link");
