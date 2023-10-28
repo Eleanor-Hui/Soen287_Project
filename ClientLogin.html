@@ -3,7 +3,11 @@
     <head lang="en">
         <meta charset="utf-8">
         <title>Client Login</title>
-        <link rel="stylesheet" href="ClientLoginStyle.css">
+        <!--general style-->
+        <link href="ClientLoginStyle.css" rel="stylesheet">
+        <!--outside eye-icon style-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+      
     </head>
 <body>
     <div id="container">
@@ -15,28 +19,38 @@
                 <li><a href="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Provider\group_project\contactForm\contact1.html">CONTACT</a></li>
             </ul>
         </nav>
+        <hr>
          <!--login box-->
         <div id="login">
             <header> 
                 <br>Client Login<br>
                 </header>
             <form action="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Client\NewLicense.html" method="post" id="clientLogin">
-                <input class="input-field" type="text" id="Email" name="Email" placeholder="Email" required>
-                <input class="input-field" type="password" id="password" name="password" placeholder="Password" required>
+                <div>
+                    <input type="text" id="Email" name="Email" placeholder="Email" required>
+                </div>
+                <div id="password-field">
+                    <input class="password" type="password" id="password" name="password" placeholder="Password" required>
                 <i class='bx bx-hide eye-icon'></i>
+                </div>
                 <div id="otherOptions">
                     <input type="checkbox" id="rememberMe" name="rememberMe" value="rememberMe">
                     <label for="rememberMe">Remember me</label>
                     <label id="forgetPW" onclick="forgotPassword()">Forgot password/username</label>
-                    <h4 id="resetPW"></h4>
                 </div>
                 <input id="loginButton" type="submit" value="login"/>
             </form>
             <h4 id="signup">Not a member yet? <a href="">Register now</a></h4>
-         
+            <h4 id="resetPW"></h4>
         </div>
+            <!--footer-->
+            <footer>
+                &copy; SOEN 287 &nbsp Section Q &nbsp &nbsp &nbsp &nbsp  Final Project Deliverable 1, 2023  &nbsp  &nbsp  &nbsp  &nbsp Version 1.0
+            </footer>
     </div>
 
-    <script src="ClientLoginSignup.js"></script>
+  <!--JavaScript-->
+  <script src="ClientLoginSignup.js"></script>
+
 </body>
 </html>
