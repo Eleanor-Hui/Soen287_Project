@@ -28,7 +28,7 @@ body {
      filter: blur(10px); 
  }
  #mainNav { 
-     height:136px;
+     height:120px;
      display: flex;
      box-sizing: border-box;
      width: 100%;
@@ -36,7 +36,6 @@ body {
      margin-top: 0;
      margin-right:0;
      background-color: #fff;
-
      position: relative;
      background: transparent;
  }
@@ -46,6 +45,7 @@ body {
      text-align: center;
      font-weight: bold;
      font-size: larger;
+     padding: 0;
  }
  #mainNav ul li{
      list-style-type:none;
@@ -56,14 +56,17 @@ body {
  }
  #mainNav ul li a{
      text-decoration: none;
-     color:white;
+     color:#CACACA;
      text-transform: uppercase;
+ }
+ #mainNav ul li a:hover {
+     color:#fff;
  }
  #mainNav ul li::after{
      content: "";
      height:3px;
      width: 0;
-     background: rgb(173, 216, 230);
+     background: #fff;
      position: absolute;
      left:0;
      bottom: -10px;
@@ -73,17 +76,29 @@ body {
  #mainNav ul li:hover::after{
      width: 100%;
  }
- 
+ footer {
+     color:white;
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     width: 100%;
+     text-align: center;
+ }
+ hr {
+     color:#fff;
+     size: 1px;
+     width:70%;
+     opacity: 0.3;
+ }
 header {
      font-size: 28px;
     font-weight: 600;
     color: #232836;
     text-align: center;
 }
-
 #login {
      position:relative;
-     left:38%;
+     left:37%;
      top:12%;
      justify-content:center;
      align-items: center;
@@ -124,19 +139,34 @@ input {
      text-decoration: underline;
      color:darkblue;
 }
-.input-field {
+#Email, #password {
      cursor: pointer;
      font-size: 16px;
      font-weight: 400;
 }
-.input-field:hover {
-     border-color: black;
+#Email:focus, #password:focus {
+     border-color: #CACACA;
      transition: 1ms;
+     border-bottom-width: 2px;
 }
+#password-field {
+     height: 74px;
+}
+.eye-icon{
+     position: relative;
+     left:45%;
+     bottom:25px; 
+     transform: translateY(-50%);
+     font-size: 18px;
+     color: #8b8b8b;
+     cursor: pointer;
+     padding: 5px;
+ }
 #otherOptions {
      display: flex;
      justify-content: left;
      font-size: small;
+
 }
 #rememberMe {
      width: 15px;
