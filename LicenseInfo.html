@@ -31,7 +31,7 @@
                 <li><a href="C:\Users\yihua\OneDrive\桌面\2023Fall\SOEN287\Assignments\Part 1 Provider\group_project\contactForm\contact1.html">CONTACT</a></li>
             </ul>
         </nav>
-      
+        <hr>
         <div id="content"> 
             <header>
                 <h1>Search License Info</h1>
@@ -72,6 +72,10 @@
             </table>
         </div>
         </div>
+            <!--footer-->
+            <footer>
+                &copy; SOEN 287 &nbsp Section Q &nbsp &nbsp &nbsp &nbsp  Final Project Deliverable 1, 2023  &nbsp  &nbsp  &nbsp  &nbsp Version 1.0
+            </footer>
     </div>
     <script>
         function showSearchResults() {
@@ -80,14 +84,14 @@
 
             // Replace the content in the result placeholders with the retrieved data (simulated here)
             document.getElementById("resultLicenseNumber").textContent = licenseNumber;
-            if(licenseNumber == 123){
+            if(licenseNumber == "AB202310JD1234567890"){
                 document.getElementById("resultHolderName").textContent = "John Doe";
                 document.getElementById("resultStatus").textContent = "Expired";
                 document.getElementById("resultExpiryDate").textContent = "December 31, 2021";
                 document.getElementById("resultSubscriptionType").textContent = "Annual";
                 
             }
-            else if(licenseNumber == 1234){
+            else if(licenseNumber == "CD202311JD0987654321"){
                 document.getElementById("resultHolderName").textContent = "Harry Potter";
                 document.getElementById("resultStatus").textContent = "Active";
                 document.getElementById("resultExpiryDate").textContent = "July 1, 2099";
