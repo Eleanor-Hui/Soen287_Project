@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+           Link a License
+        </title>
+        <link rel="stylesheet" href="RenewLicenseStyle.css"/>
+        <script>
+            function handleSelectChange(selectElement) {
+                var customInput = document.getElementById('customInput');
+
+                if (selectElement.value === 'Other') {
+                    customInput.style.display = 'block'; // Show the input field
+                } else {
+                    customInput.style.display = 'none'; // Hide the input field
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <nav ID="mainNav">
+        <a href="Home.html">HOME</a>
+        <a href="Team.html">TEAM</a>
+        <a href="Contact.html">CONTACT</a>
+    </nav>
+
+    <div class="sidebar">
+        <header>My Software License</header>
+        <ul>
+         <li><a href="Profile.html">Profile</a></li>
+         <li><a href="LinkLicense.html">Link a License</a></li>
+         <li><a href="LicenseInfo.html">License Info</a></li>   
+         <li><a href="NewLicense.html">License Application</a></li>
+         <li><a href="RenewLicense.html">Renew a License</a></li>
+         <li><a href="TerminateLicense.html">Terminate a License</a></li>
+         <li><a href="" class="logout">Logout</a></li>    
+        </ul>
+    </div>
+
+    <div id="title">
+        <h1><br><br>Link a License<br><br><br><br></h1>
+    </div>
+
+    <form action="/linkLicense" method="post">
+        <h3>I would like to link the following license:</h3>
+
+        <label for="name">Software name:</label><br>
+        <select class="userInput" id="name" name="name" onchange="handleSelectChange(this)" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="ms">Microsoft Office</option>
+            <option value="vscode">Visual Studio Code</option>
+            <option value="intelliJ">IntelliJ</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <!-- Input field for custom option -->
+        <div id="customInput" style="display: none">
+            <label for="customOption">Enter your option:</label>
+            <input class="userInput" type="text" id="customOption" placeholder="Enter the software name" required><br><br>
+        </div>
+
+        <label for="licenseKey">License Key:</label><br>
+        <input class="userInput" type="text" id="licenseKey" placeholder="Enter your license key" required><br><br>
+
+        <input id="submit" type="submit" value="Submit" onclick="confirmSubmission()">
+    </form>
+
+    <script>
+        function confirmSubmission() {
+            alert("Your license has been linked successfully!");
+        }
+    </script>
+    </body>
+</html>
