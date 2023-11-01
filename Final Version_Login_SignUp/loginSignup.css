@@ -1,0 +1,199 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(01.jpg);
+    column-gap: 30px;
+}
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #FFF;
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.login-title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+    margin-top: 5px;
+   position: relative;
+    
+}
+form{
+    margin-top: 30px;
+}
+.form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input{
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid#CACACA;
+}
+.field input:focus{
+    border-bottom-width: 2px;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+.field button{
+    color: #fff;
+    background-color: #2a6ee3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.field button:hover{
+    background-color: #0a579a;
+}
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+}
+.form-link span,
+.form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+.form a{
+    color: #326d9f;
+    text-decoration: none;
+}
+.form-content a:hover{
+    text-decoration: underline;
+}
+
+
+#mainNav { 
+    font-size: small;
+    height:80px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 35px 0;
+    margin-top: 0;
+    margin-right:0;
+    background-color: #fff;
+    position: relative;
+    background-color: transparent;
+    
+    
+}
+#mainNav ul {
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+    font-family: serif;
+}
+#mainNav ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
+    
+}
+#mainNav ul li a{
+    text-decoration: none;
+    color:#CACACA;
+    text-transform: uppercase;
+}
+#mainNav ul li a:hover {
+    color:#fff;
+}
+#mainNav ul li::after{
+    content: "";
+    height:3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+#mainNav ul li:hover::after{
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: transparent; /* Add your desired background color */
+    color: #fff;
+    padding: 10px 0;
+    
+}
+
+header{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+hr {
+    color:#fff;
+    size: 1px;
+    width:70%;
+    opacity: 0.3;
+    margin: 0 auto; /* Center the hr horizontally by adding margin */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent; /* Your footer styling */
+    color: #fff;
+    padding-bottom: 5px;
+    font-family: serif;
+}
