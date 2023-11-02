@@ -117,13 +117,30 @@ body {
 #mainNav ul li:hover::after{
     width: 100%;
 }
-footer {
-    color:white;
-    position: absolute;
+footer{
+    position:absolute;
     bottom: 0;
-    right: 0;
+    justify-content: center;
+    background: transparent;
+    width: 100vw;
+    font-family:sans-serif;
+    color: #fff;
     width: 100%;
+}
+.footer-content{
     text-align: center;
+}
+.footer-content h3{
+    text-transform: capitalize;
+    line-height: 1;
+    font-weight: bold;
+    font-size:12px ;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 0.5;
+    font-size: 8px;
 }
 hr {
     color:#fff;
