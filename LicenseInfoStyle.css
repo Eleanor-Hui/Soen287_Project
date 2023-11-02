@@ -56,7 +56,7 @@ body {
     top:0;
     left:300px;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 #container::before {
     content: "";
@@ -113,17 +113,8 @@ body {
     bottom: -10px;
     transition: 0.5s;
 }
-
 #mainNav ul li:hover::after{
     width: 100%;
-}
-footer {
-    color:white;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
 }
 hr {
     color:#fff;
@@ -131,12 +122,37 @@ hr {
     width:70%;
     opacity: 0.3;
 }
+footer{
+    position:absolute;
+    bottom: 0;
+    justify-content: center;
+    background: transparent;
+    width: 100vw;
+    font-family:sans-serif;
+    color: #fff;
+    width: 100%;
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content h3{
+    text-transform: capitalize;
+    line-height: 1;
+    font-weight: bold;
+    font-size:12px ;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 0.5;
+    font-size: 8px;
+}
 #content {
     width:60%;
     height:fit-content;
     position:relative;
-    top:150px;
-    left:18%;
+    top:100px;
+    left:20%;
     text-align: left; 
     align-items: center;
     justify-content: center;
@@ -150,65 +166,74 @@ hr {
 header {
     text-align: center;
 }
-#searchBox {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding:0;
-}
-form {
-    width:100%;
-}
-label {
-    font-weight: bold;
-    display:contents;
-    margin-bottom: 5px;
-}
-#licenseNumber {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
+table,
+table th, 
+table td{
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-#submit {
-    margin-left: 30px;
-    background-color: #2a6ee3; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 4px; 
-    font-size: 20px; 
-    cursor:pointer;}
-#submit:hover {background-color:#0a579a;}
-
-#searchResults {
-    width:80%;
-}
-#resultLicenseNumber {
-    color: #2a6ee3;
+    border-collapse: collapse;
+    text-align: center;
+    padding:10px;
 }
 table {
-    border-collapse: collapse;
+    height:fit-content;
     width: 100%;
-    width:100%;
 }
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    width:100%;
-}
-
 th {
-    background-color: #f2f2f2;
-    width:100%;
+    font-size: 20px;;
 }
-.col1 {
-    width:35%;
+td {
+    font-size: 16px;;
 }
-.col2 {
-    width:65%;
+.cards {
+    display: flex;
+    gap: 20px;
+    height: 120px;
+}
+.card {
+    padding: 20px;
+    border-radius: 20px;
+    min-width: 230px;
+    height: auto;
+    transition: .3s;
+}
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card--data {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.card h1 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+.card--icon--lg {
+    font-size: 80px;
+}
+
+.card--icon {
+    margin-right: 5px;
+}
+
+.card-1 {
+    background-color: rgba(80, 115, 251, .1);
+}
+.card-1 .card--title {
+    color: rgba(80, 115, 251, 1);
+}
+.card-1 .card--icon--lg {
+    color: rgba(80, 115, 251, .4);
+}
+.card-1 .card--title {
+    color: rgba(80, 115, 251, 1);
+}
+.active{
+    color:rgb(21, 104, 21);
+}
+.expired {
+    color:rgb(141, 20, 20);
+}
+.even {
+    background-color: #e7e7e7;
 }
