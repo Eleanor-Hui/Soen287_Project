@@ -118,13 +118,14 @@ footer{
 .about-section{
     background-color: #f3f2ed;
     width: 30%; /* Adjust width as needed */
-    height:75%;
+    height:70%;
     float: left;
     position: relative;
     top:2%;
     left: 12%;
     margin:0;
     padding-right: 25px;
+    padding-top: 25px;
     box-shadow: 10px 15px rgba(255, 255, 255, 0.3);
 }
 .inner-container{
