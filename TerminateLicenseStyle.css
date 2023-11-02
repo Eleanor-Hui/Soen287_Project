@@ -144,6 +144,21 @@ footer{
     line-height: 0.5;
     font-size: 8px;
 }
+.footer-content{
+    text-align: center;
+}
+.footer-content h3{
+    text-transform: capitalize;
+    line-height: 1;
+    font-weight: bold;
+    font-size:12px ;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 0.5;
+    font-size: 8px;
+}
 hr {
     color:#fff;
     size: 1px;
