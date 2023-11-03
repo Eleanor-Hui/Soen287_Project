@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+            Provider Dashboard
+        </title>
+        <link rel="stylesheet" href="ProviderDashboardStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+ 
+    <body>
+        <!--side nav bar-->
+        <div class="sidebar">
+            <header>My Software License</header>
+            <a href="ProviderDashboard.html"><i class="fa fa-address-book"></i>Dashboard</a>
+            <a href="ProviderLicenseSearch.html"><i class="fa fa-reorder"></i>Search License</a>
+            <a href="Notification.html"><i class="fa fa-paper-plane"></i>Notifications</a>
+            <a href="WelcomePage.html"><i class="fa fa-sign-out"></i>Logout</a>
+        </div>
+
+        <div id="container">
+            <!--main nav bar-->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="WelcomePage.html">Home</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="ContactForm.html">Contact</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <!--Application form-->
+            <div id="content">
+                <header> 
+                    <h1 id="overview">Client License Overview</h1>
+                </header>
+                <div class="cards">
+                    <div class="card card-1">
+                        <div class="card--data">
+                            <div class="card--content">
+                                <h5 class="card--title">Total Clients</h5>
+                                <h1 id="client-number">6</h1>
+                            </div>
+                            <i class="ri-user-line card--icon--lg"></i>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="Clients">
+                    <div class="title">
+                        <h2 class="section--title">Clients Accounts</h2>
+                        
+                    </div>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>License Number</th>
+                                    <th>Purchased on</th>
+                                    <th>Expires</th>
+                                    <th>Status</th>
+                                    <th>Notification</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cameron Williamson</td>
+                                    <td>404982877643</td>
+                                    <td>2023/03/01</td>
+                                    <td>2024/03/01</td>
+                                    <td class="active">active</td>
+                                    <td><a href="NotificationStyle.html"><button class="notice">send</button></a></td>
+                                </tr>
+                                <tr>
+                                    <td>George Washington</td>
+                                    <td>8375699227742</td>
+                                    <td>2022/03/02</td>
+                                    <td>2023/03/02</td>
+                                    <td class="expired">expired</td>
+                                    <td><a href="NotificationStyle.html"><button class="notice">send</button></a></td>
+                                </tr>
+                                <tr>
+                                    <td>John Adams</td>
+                                    <td>22948747616344</td>
+                                    <td>2022/12/31</td>
+                                    <td>2023/12/31</td>
+                                    <td class="active">active</td>
+                                    <td><a href="NotificationStyle.html"><button class="notice">send</button></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Thomas Jefferson</td>
+                                    <td>08877264664242</td>
+                                    <td>2023/03/04</td>
+                                    <td>2024/03/04</td>
+                                    <td class="active">avtive</td>
+                                    <td><a href="NotificationStyle.html"><button class="notice">send</button></a></td>
+                                </tr>
+                                <tr>
+                                    <td>James Madison</td>
+                                    <td>209884774634</td>
+                                    <td>2023/03/01</td>
+                                    <td>2024/03/01</td>
+                                    <td class="active">Active</td>
+                                    <td><a href="NotificationStyle.html"><button class="notice">send</button></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Andrew Jackson</td>
+                                    <td>20087276424</td>
+                                    <td>2022/03/01</td>
+                                    <td>2023/03/01</td>
+                                    <td class="expired">expired</td>
+                                    <td><a href="NotificationStyle.html"><button class="notice">send</button></a></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <!--end content--></div>
+          <!--footer-->
+          <footer>
+            <div class="footer-content">
+                <h3>Software License Management</h3>
+                <p>&copy; 2023 Software License Management. All rights reserved.</p>
+                <p>Software License Management - Ensuring compliance, optimizing costs, and simplifying software 
+                    licensing for your organization.</p>
+            </div>
+        </footer>
+        </div>
+    </body>
+</html>
