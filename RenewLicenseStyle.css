@@ -169,7 +169,7 @@ footer{
         left:23%;
         width:50%;
         height:60%;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 }
 header {
