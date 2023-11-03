@@ -22,14 +22,30 @@ tr:hover {
 
 form {
     display: inline-block;
-    margin-right: 35px;
-    
+
 }
 
-.license_numbers{
+#notifications{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:30%;
+    height:40%;
+    border-radius:15px;
+    transform: translate(-50%, -50%);
+    background-color:white;
 
-    padding:10px;
+}
 
+#notifications h2{
+
+    text-align:center;
+
+}
+
+#notifications form{
+
+    margin-left:10px;
 }
 
 input[type="submit"] {
@@ -176,6 +192,8 @@ label {
 
 html, body {
     overflow: auto; /* Enable scrolling when content exceeds the viewport. */
+    height:100%;
+
 }
 
 
