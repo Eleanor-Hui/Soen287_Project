@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+            Edit My Profile
+        </title>
+        <link rel="stylesheet" href="EditMyProfileStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+ 
+    <body>
+      <!--side nav bar-->
+      <div class="sidebar">
+        <header>My Software License</header>
+         <a href="MyProfile.html"><i class="fa fa-address-book"></i>Profile</a>
+         <a href="LinkLicense.html"><i class="fa fa-address-card"></i>Link a License</a>
+         <a href="LicenseInfo.html"><i class="fa fa-reorder"></i>License Info</a>
+         <a href="NewLicense.html"><i class="fa fa-paper-plane"></i>Apply new License</a>
+         <a href="RenewLicense.html"><i class="fa fa-pencil"></i>Renew a License</a>
+         <a href="TerminateLicense.html"><i class="fa fa-exclamation-circle"></i>Terminate a License</a>
+         <a href="WelcomePage.html"><i class="fa fa-sign-out"></i>Logout</a>
+    </div>
+
+        <div id="container">
+            <!--main nav bar-->
+            <nav ID="mainNav">
+                <ul>
+                    <li><a href="WelcomePage.html">Home</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="ContactForm.html">Contact</a></li>
+                </ul>
+            </nav>
+            <hr>
+            
+            <div id="content">
+                    <div class="profile-brief">
+                        <div class="profile-picture">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH19ngyeto6pVtTBcbl2nvWNg4v4apBpzaBg&usqp=CAU" 
+                        alt="ProfilePic">
+                        </div>
+                        <div class="profile-briefContent">
+                            <h1>John Doe</h1>
+                            <h3>johndoe0218@gmail.com - software user</h3><br/>
+                            <textarea id="intro" name="intro">Tell us more about yourself...</textarea> 
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <form class="profile-item" action="/submit" method="post">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="userInput" type="email" id="email" name="email" placeholder="123abc@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="userInput" type="text" id="name" name="name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input class="userInput" type="text" id="address" name="address" placeholder="Your address">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="userInput" id="gender" name="gender">
+                                    <option disabled selected value> -- select an option -- </option>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Nonbinary">Non-binary</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Birth of date</label>
+                                <input class="userInput" type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone number</label>
+                                <input class="userInput" type="tel" id="phone" name="phone">
+                            </div>
+                        </form>
+                        
+                        <div id="subButton">
+                            <a href=""><button id="submit" onclick="confirmSubmission()">Save</button></a>
+                        </div>
+                    </div>
+               </div>
+            <!--footer-->
+            <footer>
+                <div class="footer-content">
+                    <h3>Software License Management</h3>
+                    <p>&copy; 2023 Software License Management. All rights reserved.</p>
+                    <p>Software License Management - Ensuring compliance, optimizing costs, and simplifying software 
+                        licensing for your organization.</p>
+                </div>
+            </footer>
+        </div>
+    <!--pop-up window for subscribing successfully-->
+    <script>
+        function confirmSubmission() {
+          alert("Your profile has been changed successfully!");
+        }
+        </script>
+    </body>
+</html>

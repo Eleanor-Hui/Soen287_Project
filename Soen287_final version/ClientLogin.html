@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>Client Login</title>
+        <!--general style-->
+        <link href="ClientLoginStyle.css" rel="stylesheet">
+        <!--outside eye-icon style-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+      
+    </head>
+<body>
+    <div id="container">
+         <!--main nav bar-->
+         <nav ID="mainNav">
+            <ul>
+                <li><a href="WelcomePage.html">Home</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="ContactForm.html">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <div id="content">
+        <!--login box-->
+        <div id="login">
+            <header> 
+                <br>Client Login<br>
+                </header>
+            <form action="MyProfile.html" method="post" id="clientLogin">
+                <div>
+                    <input type="text" id="Email" name="Email" placeholder="Email" required>
+                </div>
+                <div id="password-field">
+                    <input class="password" type="password" id="password" name="password" placeholder="Password" required>
+                <i class='bx bx-hide eye-icon'></i>
+                </div>
+                <div id="otherOptions">
+                    <input type="checkbox" id="rememberMe" name="rememberMe" value="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                    <label id="forgetPW" onclick="forgotPassword()">Forgot password/username</label>
+                </div>
+                <input id="loginButton" type="submit" value="Login"/>
+            </form>
+            <h4 id="signup">Not a member yet? <a href="CreateClientAccount.html">Register now</a></h4>
+            <h4 id="resetPW"></h4>
+        </div>
+        </div>
+            <!--footer-->
+            <footer>
+                <div class="footer-content">
+                    <h3>Software License Management</h3>
+                    <p>&copy; 2023 Software License Management. All rights reserved.</p>
+                    <p>Software License Management - Ensuring compliance, optimizing costs, and simplifying software 
+                        licensing for your organization.</p>
+                </div>
+            </footer>
+    </div>
+
+  <!--JavaScript-->
+  <script src="ClientLoginSignup.js"></script>
+
+</body>
+</html>

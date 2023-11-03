@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+            Applying New License
+        </title>
+        <link rel="stylesheet" href="NewLicenseStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+ 
+    <body>
+      <!--side nav bar-->
+      <div class="sidebar">
+        <header>My Software License</header>
+         <a href="MyProfile.html"><i class="fa fa-address-book"></i>Profile</a>
+         <a href="LinkLicense.html"><i class="fa fa-address-card"></i>Link a License</a>
+         <a href="LicenseInfo.html"><i class="fa fa-reorder"></i>License Info</a>
+         <a href="NewLicense.html"><i class="fa fa-paper-plane"></i>Apply new License</a>
+         <a href="RenewLicense.html"><i class="fa fa-pencil"></i>Renew a License</a>
+         <a href="TerminateLicense.html"><i class="fa fa-exclamation-circle"></i>Terminate a License</a>
+         <a href="WelcomePage.html"><i class="fa fa-sign-out"></i>Logout</a>
+    </div>
+
+        <div id="container">
+            <!--main nav bar-->
+            <nav ID="mainNav">
+                <ul>
+                    <li><a href="WelcomePage.html">Home</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="ContactForm.html">Contact</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <!--Application form-->
+            <div id="content">
+                <header> 
+                    <h1> Apply for a New License<br></h1>
+                </header>
+            <form action="/submit" method="post">
+                <label for="name">Software Name:</label><br>
+                <input class="userInput" type="text" id="name" name="name" placeholder="Microsoft Word" required><br><br>
+        
+                <label for="purpose">Purpose of usage:</label><br>
+                <select class="userInput" id="purpose" name="purpose" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="business">Business</option>
+                <option selected="true" value="educational">Educational</option>
+                <option value="personal">Personal</option>
+                </select><br><br>
+        
+                <label for="date">Preferred starting date:</label>
+                <input class="userInput" type="date" id="date" name="date" required><br><br>
+        
+                <label for="type">Type of subscription preferred:</label><br>
+                <select class="userInput" id="type" name="type" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="permanent">Permanent</option>
+                <option value="annual">Annual</option>
+                </select><br><br>
+        
+                <label for="payment">Preferred payment method:</label>
+                <select class="userInput" id="payment" name="payment" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="debit/credit">Debit/Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="gift card">Gift Card</option>
+                </select> <br><br>
+                
+                <div id="subButton">
+                    <input id="submit" type="submit" value="Submit" onclick="confirmSubmission()">
+                </div>
+            </form>
+               </div>
+            <!--footer-->
+            <footer>
+                <div class="footer-content">
+                    <h3>Software License Management</h3>
+                    <p>&copy; 2023 Software License Management. All rights reserved.</p>
+                    <p>Software License Management - Ensuring compliance, optimizing costs, and simplifying software 
+                        licensing for your organization.</p>
+                </div>
+            </footer>
+        </div>
+    
+     
+    <!--pop-up window for subscribing successfully-->
+    <script>
+        function confirmSubmission() {
+          alert("Your application has been submitted successfully!");
+        }
+        </script>
+    </body>
+</html>

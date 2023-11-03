@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            License Info
+        </title>
+        <link rel="stylesheet" href="LicenseInfo_providerStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+    <body>
+
+   <body>
+    <!--side nav bar-->
+    <div class="sidebar">
+        <header>My Software License</header>
+        <a href="dashboard.html"><i class="fa fa-address-book"></i>Dashboard</a>
+        <a href="LicenseInfo.html"><i class="fa fa-reorder"></i>Search License</a>
+        <a href="notification.html"><i class="fa fa-paper-plane"></i>Notifications</a>
+        <br>
+         <br>
+         <br>
+         <br>
+
+         <a href="WelcomePage.html"><i class="fa fa-sign-out"></i>Logout</a>
+    </div>
+    <div id="container">
+        <div class="overlay"></div>
+        <!--main nav bar-->
+        <nav ID="mainNav">
+            <ul>
+                <li><a href="WelcomePage.html">HOME</a></li>
+                <li><a href="AboutUs.html">ABOUT US</a></li>
+                <li><a href="ContactForm.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <div id="content"> 
+            <header>
+                <h1>Search License Info</h1>
+               </header>
+        <!-- Search form -->
+            <div id="searchBox">
+                <form action="/search" method="get" onsubmit="return showSearchResults();">
+                    <label for="licenseNumber">Please Enter a License Number:</label><br>
+                    <input type="text" id="licenseNumber" name="licenseNumber" placeholder="Enter license number" required>
+                    <button type="submit" id="submit">Search</button>
+                </form>    
+            </div>
+       
+         <!-- Display search results in a table (initially hidden) -->
+            <div id="searchResults" style="display: none;">
+                <h2>Search Results for License Number: <span id="resultLicenseNumber"></span></h2>
+                <table>
+                    <tr>
+                        <th class="col1">Information</th>
+                        <th class="col2">Details</th>
+                    </tr>
+                    <tr>
+                        <td class="col1">Holder Name</td>
+                        <td class="col2"><span id="resultHolderName"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Status</td>
+                        <td class="col2"><span id="resultStatus"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Expiry Date</td>
+                        <td class="col2"><span id="resultExpiryDate"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Subscription Type</td>
+                        <td class="col2"><span id="resultSubscriptionType"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1">Software</td>
+                        <td class="col2"><span id="resultSoftware"></span></td>
+                    </tr>
+                </table>
+                <button class="mybutton" type="submit">Block</button>
+                <button class="mybutton" type="submit">Unblock</button>
+            </div>
+        </div>
+            <!--footer-->
+            <footer>
+                &copy; SOEN 287 &nbsp Section Q &nbsp &nbsp &nbsp &nbsp  Final Project Deliverable 1, 2023  &nbsp  &nbsp  &nbsp  &nbsp Version 1.0
+            </footer>
+    </div><!--end container-->
+    <script>
+        function showSearchResults() {
+            // Get the input value
+            var licenseNumber = document.getElementById("licenseNumber").value;
+
+            // Replace the content in the result placeholders with the retrieved data (simulated here)
+            document.getElementById("resultLicenseNumber").textContent = licenseNumber;
+            if(licenseNumber == "AB202310JD1234567890"){
+                document.getElementById("resultHolderName").textContent = "John Doe";
+                document.getElementById("resultStatus").textContent = "Expired";
+                document.getElementById("resultExpiryDate").textContent = "December 31, 2021";
+                document.getElementById("resultSubscriptionType").textContent = "Annual";
+                document.getElementById("resultSoftware").textContent = "Microsoft office";
+                
+            }
+            else if(licenseNumber == "CD202311JD0987654321"){
+                document.getElementById("resultHolderName").textContent = "Harry Potter";
+                document.getElementById("resultStatus").textContent = "Active";
+                document.getElementById("resultExpiryDate").textContent = "July 1, 2099";
+                document.getElementById("resultSubscriptionType").textContent = "Permanent";
+                document.getElementById("resultSoftware").textContent = "Visual Studio";
+            }
+            
+            else {
+                document.getElementById("resultLicenseNumber").textContent = licenseNumber;
+                document.getElementById("resultHolderName").textContent = "License not found";
+                document.getElementById("resultStatus").textContent = "N/A";
+                document.getElementById("resultExpiryDate").textContent = "N/A";
+                document.getElementById("resultSubscriptionType").textContent = "N/A";
+                document.getElementById("resultSoftware").textContent = "N/A";
+            }
+
+            // Display the search results
+            document.getElementById("searchResults").style.display = "block";
+
+            // Prevent the form from actually submitting (to keep it on the same page)
+            return false;
+        }
+
+        //allow user input
+        function handleSearchChange(selectElement) {
+            var customInput = document.getElementById('searchLicense');
+
+            if (selectElement.value === 'Other') {
+                customInput.style.display = 'block'; // Show the input field
+            } else {
+                customInput.style.display = 'none'; // Hide the input field
+            }
+        }
+    </script>      
+    </body>
+</html>

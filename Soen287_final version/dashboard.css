@@ -1,0 +1,267 @@
+body {
+    background-color: #f0f0f0;
+    padding:0;
+    margin:0;
+    height: 100vh;
+}
+.sidebar {
+    z-index: 2;
+    float: left;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgb(173, 216, 230), #fff);
+}
+.sidebar header{
+    font: 22px;
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    text-align: center;
+    background-color: rgb(173, 216, 230);
+    line-height: 110px;
+    border: solid 3px rgb(173, 216, 230);
+}
+.fa {
+    padding-right: 30px;
+}
+.sidebar a {
+    text-align: left;
+    font-size: 20px;
+    padding: 10px 35px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    line-height: 65px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(173, 216, 230);
+    border-top: 1px solid rgb(173, 216, 230);
+} 
+.sidebar a:hover {
+    padding-left: 70px;
+    transition: 1ms;
+}
+
+#mainNav { 
+    height:120px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 35px 0;
+    margin-top: 0;
+    margin-right:0;
+    background-color: #fff;
+    position: relative;
+    background: transparent;
+}
+#mainNav ul {
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    padding: 0;
+}
+#mainNav ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+#mainNav ul li a{
+    text-decoration: none;
+    color:#000000;
+    text-transform: uppercase;
+}
+#mainNav ul li a:hover {
+    color:#636363;
+}
+#mainNav ul li::after{
+    content: "";
+    height:3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+#mainNav ul li:hover::after{
+    width: 100%;
+}
+hr {
+    color:#fff;
+    size: 1px;
+    width:70%;
+    opacity: 0.3;
+}
+footer {
+    color:rgb(0, 0, 0);
+    position:flex;
+
+    text-align: center;
+    margin-bottom:50px;
+}
+
+#container {
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    width:calc(100% - 300px);
+    height:100%;
+    position: relative;
+    top:0;
+    left:300px;
+    margin: 0;
+    
+}
+
+
+#content {
+    width:40%;
+    height:fit-content;
+    position:relative;
+    top:30px;
+    left:28%;
+    text-align: left; 
+    
+}
+header {
+    text-align: center;
+}
+
+
+
+
+/*cards*/
+
+.cards {
+    display: flex;
+    gap: 20px;
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+   
+}
+h1{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 20px;
+    
+    min-width: 230px;
+    height: auto;
+    transition: .2s;
+}
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card--data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card h1 {
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 35%;
+}
+.card--icon--lg {
+    font-size: 80px;
+}
+
+.card--icon {
+    margin-right: 5px;
+}
+
+.card-1 {
+    background-color: rgba(44, 81, 227, 0.117);
+}
+.card-1 .card--title {
+    color: rgba(80, 115, 251, 1);
+    font-size: 18px;
+}
+.card-1 .card--icon--lg {
+    color: rgba(80, 115, 251, .4);
+}
+.card-2 {
+    background-color: rgba(241, 67, 67, 0.1);
+}
+
+.card-2 .card--title {
+    color: rgb(245, 157, 151);
+    font-size:18px;
+}
+
+.card-2 .card--icon--lg {
+    color: rgba(239, 127, 114, 0.4);
+}
+
+/*Clients*/
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.section--title {
+    font-weight: bold;
+    margin-left: 2%;
+    margin-top: 30px;
+    
+}
+
+.table {
+    height: 500px;
+    overflow-y: scroll;
+}
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-left: 3%;
+}
+tr {
+    border-bottom: 1px solid #f1f1f1;
+}
+td,
+th {
+    padding-block: 10px;
+}
+
+
+.active {
+    color: #70d7a5;
+}
+.expired {
+    color: #e86786;
+}
+
+.notice{
+    
+    text-align: center;
+    font-size: 15px;
+    background-color: #6987a7; 
+      color: #fff; 
+      padding: 10px 20px; /* Padding inside the button */
+      border: none; /* Remove the default button border */
+      border-radius: 5px;
+      cursor: pointer; /* Change cursor to a pointer on hover */
+}
+   
+
+.notice:hover{
+    background-color: #0056b3; /* Button background color on hover */
+}
