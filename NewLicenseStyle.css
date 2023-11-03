@@ -17,9 +17,9 @@ body {
 .sidebar header{
     font: 22px;
     padding: 10px 15px;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: bold;
-    color: black;
+    color: #252525;
     display: block;
     text-align: center;
     background-color: rgb(173, 216, 230);
@@ -31,11 +31,11 @@ body {
 }
 .sidebar a {
     text-align: left;
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 10px 35px;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
-    color: black;
+    color: #252525;
     display: block;
     line-height: 65px;
     box-sizing: border-box;
@@ -51,12 +51,13 @@ body {
     justify-content:center;
     align-items: center;
     width:calc(100% - 300px);
-    height:100%;
+    height:100vh;
     position: relative;
     top:0;
     left:300px;
     margin: 0;
     overflow: auto;
+    min-width: 50%;
 }
 #container::before {
     content: "";
@@ -85,7 +86,7 @@ body {
     justify-content: space-evenly;
     text-align: center;
     font-weight: bold;
-    font-size: larger;
+    font-size: 1.2rem;
     padding: 0;
 }
 #mainNav ul li{
@@ -124,7 +125,7 @@ hr {
 }
 footer{
     position:absolute;
-    bottom: 0;
+    bottom: 20px;
     justify-content: center;
     background: transparent;
     width: 100vw;
@@ -139,19 +140,19 @@ footer{
     text-transform: capitalize;
     line-height: 1;
     font-weight: bold;
-    font-size:12px ;
+    font-size:0.75rem ;
 }
 .footer-content p{
     max-width: 500px;
     margin: 10px auto;
     line-height: 0.5;
-    font-size: 8px;
+    font-size: 0.5rem;
 }
 #content {
     width:40%;
     height:fit-content;
     position:relative;
-    top:30px;
+    top:15px;
     left:28%;
     text-align: left; 
     align-items: center;
@@ -162,6 +163,14 @@ footer{
     padding: 30px;
     background: #FFF;
     box-shadow: 0 2px 4px rgba(41, 40, 40, 0.1);
+}
+@media screen and (max-height: 880px) {
+    #content{
+        left:23%;
+        width:50%;
+        height:60%;
+        overflow: scroll;
+    }
 }
 header {
     text-align: center;
@@ -184,7 +193,7 @@ label {
      padding: 10px 20px; 
      border: none; 
      border-radius: 4px; 
-     font-size: 20px; 
+     font-size: 1.25rem; 
      cursor:pointer;}
 #submit:hover {background-color:#0a579a;}
 #subButton {
