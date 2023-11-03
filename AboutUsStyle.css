@@ -25,7 +25,7 @@ body {
     left: 0;
     width: 100vw;
     height: 125vh;
-    background: url('background.jpg') center/cover no-repeat;
+    background: url('background.jpg') center/cover repeat;
     filter: blur(10px); 
 }
 #mainNav { 
@@ -155,14 +155,21 @@ footer{
     font-size:3.75rem;
     font-weight: 900;
 }
-@media screen and (max-width: 1740px) {
-    .inner-container h1{
-        font-size:2.75rem;
-    }
-}
 @media screen and (max-width: 1540px) {
     .inner-container h1{
-        font-size:2.25rem;
+        font-size:2.5rem;
+        width:90%;
+        padding-right: 30px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .inner-container h1{
+        font-size:2rem;
+    }
+}
+@media screen and (max-width: 1340px) {
+    .inner-container h1{
+        font-size:1.85rem;
     }
 }
 @media screen and (max-width: 1240px) {
@@ -175,19 +182,17 @@ footer{
         font-size:1.25rem;
     }
 }
-@media screen and (max-height: 880px) {
-    .inner-container h1{
+
+@media screen and (max-height: 840px) {
+    .inner-container h1 {
         font-size:2.75rem;
     }
 }
-@media screen and (max-height: 800px) {
-    .inner-container h1{
-        font-size:1.85rem;
-    }
-}
+
+
 .text{
     font-size: 1.25rem;
-    color:black;
+    color:#252525;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
@@ -200,25 +205,32 @@ footer{
 @media screen and (max-width: 1240px) {
     #title {
         font-size: 3rem;
-        padding-top: 10%;
+        padding-top: 8%;
     }
 }
 @media screen and (max-height: 840px) {
     #title {
         font-size: 3rem;
-        padding-top: 10%;
+        padding-top: 8%;
     }
 }
 @media screen and (max-height: 680px) {
     #title {
         font-size: 2.5rem;
-        padding-top: 10%;
+        padding-top: 8%;
     }
 }
 #section1 {
     border-bottom: 1px solid #252525;
     width:85%;
 }
+@media screen and (max-width: 1540px) {
+    .inner-container h1{
+        width:90%;
+        padding-right: 30px;
+    }
+}
+
 #section2 {
     border-bottom: 3px solid #252525;
     width:75%;
@@ -227,6 +239,11 @@ footer{
 @media screen and (max-width: 1240px) {
     #section2 {
         font-size:0.75rem;
+    }
+}
+@media screen and (max-height: 800px) {
+    #section2 {
+        font-size:0.85rem;
     }
 }
 @media screen and (max-height: 680px) {
