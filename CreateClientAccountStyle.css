@@ -8,12 +8,13 @@ body {
     box-sizing: border-box;
     justify-content:center;
     align-items: center;
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     position: relative;
     top:0;
     margin: 0;
     overflow: auto;
+    min-width: 50%;
 }
 #container::before {
     content: "";
@@ -23,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height:135%;
+    height:140%;
     overflow: auto;
     background: url('background.jpg') center/cover repeat;
     filter: blur(10px); 
@@ -84,34 +85,34 @@ hr {
 }
 footer{
     position:relative;
-    bottom: 0;
-    justify-content: center;
+    bottom: 20px;
+    left: 0;
     background: transparent;
     width: 100vw;
     font-family:sans-serif;
     color: #fff;
-    width: 100%;
 }
 .footer-content{
     text-align: center;
 }
+
 .footer-content h3{
     text-transform: capitalize;
     line-height: 1;
     font-weight: bold;
-    font-size:12px ;
+    font-size:0.75rem ;
 }
 .footer-content p{
     max-width: 500px;
     margin: 10px auto;
     line-height: 0.5;
-    font-size: 8px;
+    font-size:0.5rem;
 }
 #content {
     width:40%;
-    height:fit-content;
+    height:100%;
     position:relative;
-    top:30px;
+    top:20px;
     left:28%;
     text-align: left; 
     align-items: center;
@@ -120,9 +121,14 @@ footer{
     border-radius: 30px;
     border-spacing: 10px;
     padding: 30px;
-    margin-bottom: 50px;
     background: #FFF;
     box-shadow: 0 2px 4px rgba(41, 40, 40, 0.1);
+    margin-bottom: 70px;
+}
+@media screen and (max-height: 880px) {
+    #content{
+        overflow: scroll;
+    }
 }
 header {
     text-align: center;
