@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+            My Profile
+        </title>
+        <link rel="stylesheet" href="MyProfileStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+ 
+    <body>
+      <!--side nav bar-->
+      <div class="sidebar">
+        <header>My Software License</header>
+         <a href="MyProfile.html"><i class="fa fa-address-book"></i>Profile</a>
+         <a href="LinkLicense.html"><i class="fa fa-address-card"></i>Link a License</a>
+         <a href="LicenseInfo.html"><i class="fa fa-reorder"></i>License Info</a>
+         <a href="NewLicense.html"><i class="fa fa-paper-plane"></i>Apply new License</a>
+         <a href="RenewLicense.html"><i class="fa fa-pencil"></i>Renew a License</a>
+         <a href="TerminateLicense.html"><i class="fa fa-exclamation-circle"></i>Terminate a License</a>
+         <a href="WelcomePage.html"><i class="fa fa-sign-out"></i>Logout</a>
+    </div>
+
+        <div id="container">
+            <!--main nav bar-->
+            <nav ID="mainNav">
+                <ul>
+                    <li><a href="WelcomePage.html">Home</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="ContactForm.html">Contact</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <!--Application form-->
+            <div id="content">
+                    <div class="profile-brief">
+                        <div class="profile-picture">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH19ngyeto6pVtTBcbl2nvWNg4v4apBpzaBg&usqp=CAU" 
+                        alt="ProfilePic">
+                        </div>
+                        <div class="profile-briefContent">
+                            <h1>John Doe</h1>
+                            <h3>johndoe0218@gmail.com - software user</h3><br/>
+                            <textarea name="intro">Hi, I am using License Management System. </textarea> 
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <table class="profile-item">
+                            <tr>
+                                <th>Email</th>
+                                <td>johndoe0218@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th> Name</th>
+                                <td>John Doe</td>
+                            </tr>
+                            <tr>
+                                <th> Address </th>
+                                <td>123 St.Catherine</td>
+                            </tr>
+                            <tr>
+                                <th> Gender </th>
+                                <td>Male</td>
+                            </tr>
+                            <tr>
+                                <th>Birthday</th>
+                                <td>1999-02-18</td>
+                            </tr>
+                            <tr>
+                                <th>Phone Number</th>
+                                <td>5141112222</td>
+                            </tr>
+                        </table>
+                        <div id="subButton">
+                            <a href="EditMyProfile.html"><button id="submit">Edit profile</button></a>
+                        </div>
+                    </div>
+
+               </div>
+            <!--footer-->
+            <footer>
+                <div class="footer-content">
+                    <h3>Software License Management</h3>
+                    <p>&copy; 2023 Software License Management. All rights reserved.</p>
+                    <p>Software License Management - Ensuring compliance, optimizing costs, and simplifying software 
+                        licensing for your organization.</p>
+                </div>
+            </footer>
+        </div>    
+     
+    <!--pop-up window for subscribing successfully-->
+    <script>
+        function confirmSubmission() {
+          alert("Your application has been submitted successfully!");
+        }
+        </script>
+    </body>
+</html>

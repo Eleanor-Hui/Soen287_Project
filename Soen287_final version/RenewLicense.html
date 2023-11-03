@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>
+           Renewing a License
+        </title>
+        <link rel="stylesheet" href="RenewLicenseStyle.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </head>
+
+   <body>
+    <!--side nav bar-->
+    <div class="sidebar">
+        <header>My Software License</header>
+         <a href="MyProfile.html"><i class="fa fa-address-book"></i>Profile</a>
+         <a href="LinkLicense.html"><i class="fa fa-address-card"></i>Link a License</a>
+         <a href="LicenseInfo.html"><i class="fa fa-reorder"></i>License Info</a>
+         <a href="NewLicense.html"><i class="fa fa-paper-plane"></i>Apply new License</a>
+         <a href="RenewLicense.html"><i class="fa fa-pencil"></i>Renew a License</a>
+         <a href="TerminateLicense.html"><i class="fa fa-exclamation-circle"></i>Terminate a License</a>
+         <a href="WelcomePage.html"><i class="fa fa-sign-out"></i>Logout</a>
+    </div>
+
+    <div id="container">
+        <!--main nav bar-->
+        <nav ID="mainNav">
+            <ul>
+                <li><a href="WelcomePage.html">Home</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="ContactForm.html">Contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <!--application form-->
+        <div id="content">
+            <header>
+                <h1>Renew a License</h1>
+            </header>
+        <form action="/submit" method="post">
+            <h3>I would like to renew the folling license:</h3>
+        <label for="name">Software name:</label><br>
+        <select class="userInput" id="name" name="name" onchange="handleSelectChange(this)" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="ms">Microsoft Office</option>
+            <option value="vscode">Visual Studio Code</option>
+            <option value="intelliJ">IntelliJ</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+        <!-- Input field for custom option -->
+        <div id="customInput" style="display: none">
+            <label for="customOption">Enter a your option:</label>
+            <input class="userInput" type="text" id="customOption" placeholder="Enter the software name" required><br><br>
+        </div>
+    
+        <label for="automatic">Opt in for automatic renewal in the future?</label>
+        <select class="userInput" id="automatic" name="automatic" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="yes">Yes, I would like to renew my subscription automatically in the future!</option>
+            <option value="no">No, maybe next time.</option>
+        </select><br><br>
+    
+        <label for="payment">Preferred payment method:</label>
+        <select class="userInput" id="payment" name="payment" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="debit/credit">Debit/Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="gift card">Gift Card</option>
+        </select> <br><br>
+    
+        <div id="subButton">
+            <input id="submit" type="submit" value="Submit" onclick="confirmSubmission()">
+        </div>
+    </form>
+        </div>
+            <!--footer-->
+            <footer>
+                <div class="footer-content">
+                    <h3>Software License Management</h3>
+                    <p>&copy; 2023 Software License Management. All rights reserved.</p>
+                    <p>Software License Management - Ensuring compliance, optimizing costs, and simplifying software 
+                        licensing for your organization.</p>
+                </div>
+            </footer>
+    </div>
+       
+   <!--pop-up window for successful submission-->
+<script>
+    function confirmSubmission() {
+      alert("Your application has been submitted successfully!");
+    }
+    function handleSelectChange(selectElement) {
+        var customInput = document.getElementById('customInput');
+
+        if (selectElement.value === 'Other') {
+            customInput.style.display = 'block'; // Show the input field
+        } else {
+            customInput.style.display = 'none'; // Hide the input field
+        }
+    }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,259 @@
+
+body {
+    background-color: #f0f0f0;
+    padding:0;
+    margin:0;
+    height:100vh;
+}
+#container {
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    width:100vw;
+    height:100vh;
+    position: relative;
+    top:0;
+    margin: 0;
+    overflow: auto;
+    min-width: 50%;
+}
+#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125%;
+    background: url('background.jpg') center/cover no-repeat;
+    filter: blur(10px); 
+}
+#mainNav { 
+    height:120px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 35px 0;
+    margin-top: 0;
+    margin-right:0;
+    background-color: #fff;
+    position: relative;
+    background: transparent;
+}
+#mainNav ul {
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+}
+#mainNav ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+#mainNav ul li a{
+    text-decoration: none;
+    color:#CACACA;
+    text-transform: uppercase;
+}
+#mainNav ul li a:hover {
+    color:#fff;
+}
+#mainNav ul li::after{
+    content: "";
+    height:3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+#mainNav ul li:hover::after{
+    width: 100%;
+}
+footer{
+    position:relative;
+    bottom: 20px;
+    left: 0;
+    background: transparent;
+    width: 100vw;
+    font-family:sans-serif;
+    color: #fff;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+.footer-content h3{
+    text-transform: capitalize;
+    line-height: 1;
+    font-weight: bold;
+    font-size:0.75rem ;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 0.5;
+    font-size:0.5rem;
+}
+hr {
+    color:#fff;
+    size: 1px;
+    width:70%;
+    opacity: 0.3;
+}
+#content{
+    width: 100vw;
+    position: relative;
+    text-align: center;
+    color:#252525;
+    min-width: 1000px;
+    height: 100%;
+}
+header {
+    font-size: 1.75rem;
+   font-weight: 600;
+   color: #232836;
+   text-align: center;
+}
+
+.form{
+    position:absolute;
+    left:calc(50% - 250px);
+    top:12%;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    border-spacing: 10px;
+    display: block;
+    width: 430px;
+    padding: 30px;
+    background: #FFF;
+    font-family: 'Poppins', sans-serif;
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+.form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+    
+}
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input{
+     outline: none;
+     border: 1px solid#CACACA;
+}
+.field input:focus{
+    border-bottom-width: 2px;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.125rem;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+.field button{
+   background-color: #2a6ee3; 
+     color: white; 
+     padding: 10px 20px; 
+     border: none; 
+     border-radius: 4px; 
+     font-size: 1.25rem; 
+     cursor:pointer;
+}
+.field button:hover{
+    background-color: #0a579a;
+}
+.form-link{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+.form-link span,
+.form-link a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #252525;
+}
+.form a{
+    color:blue;
+    text-decoration: none;
+    transition: text-decoration 1ms;
+}
+.form-content a:hover{
+    text-decoration: underline;
+    color:darkblue;
+}
+#otherOptions {
+    display: flex;
+    justify-content:left;
+    font-size: small;
+    align-items: center;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+#rememberMe {
+    width: 15px;
+    height: 15px;
+}
+label {
+    font-size: normal;
+}
+#forgetPW {
+    color:gray;
+    text-decoration: none;
+    transition: text-decoration 1ms;
+    margin-left: 150px;
+}
+#forgetPW:hover {
+    text-decoration: underline;
+}
+#Email, #password {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+}
+#Email:focus, #password:focus {
+    border-color: #CACACA;
+    transition: 1ms;
+    border-bottom-width: 2px;
+}
+#resetPW {
+    font-weight: normal;
+    color:#45a049;
+}

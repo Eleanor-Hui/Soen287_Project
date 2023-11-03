@@ -1,0 +1,202 @@
+body {
+    background-color: #f0f0f0;
+    padding:0;
+    margin:0;
+    height: 100vh;
+}
+.sidebar {
+    z-index: 2;
+    float: left;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgb(173, 216, 230), #fff);
+}
+.sidebar header{
+    font: 22px;
+    padding: 10px 15px;
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: #252525;
+    display: block;
+    text-align: center;
+    background-color: rgb(173, 216, 230);
+    line-height: 110px;
+    border: solid 3px rgb(173, 216, 230);
+}
+.fa {
+    padding-right: 30px;
+}
+.sidebar a {
+    text-align: left;
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: #252525;
+    display: block;
+    line-height: 65px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(173, 216, 230);
+    border-top: 1px solid rgb(173, 216, 230);
+} 
+.sidebar a:hover {
+    padding-left: 70px;
+    transition: 1ms;
+}
+#container {
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    width:calc(100% - 300px);
+    height:100vh;
+    position: relative;
+    top:0;
+    left:300px;
+    margin: 0;
+    overflow: auto;
+    min-width: 50%;
+}
+#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') center/cover no-repeat;
+    filter: blur(10px); 
+}
+#mainNav { 
+    height:120px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 35px 0;
+    margin-top: 0;
+    margin-right:0;
+    background-color: #fff;
+    position: relative;
+    background: transparent;
+}
+#mainNav ul {
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+}
+#mainNav ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+#mainNav ul li a{
+    text-decoration: none;
+    color:#CACACA;
+    text-transform: uppercase;
+}
+#mainNav ul li a:hover {
+    color:#fff;
+}
+#mainNav ul li::after{
+    content: "";
+    height:3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+#mainNav ul li:hover::after{
+    width: 100%;
+}
+hr {
+    color:#fff;
+    size: 1px;
+    width:70%;
+    opacity: 0.3;
+}
+footer{
+    position:absolute;
+    bottom: 20px;
+    justify-content: center;
+    background: transparent;
+    width: 100vw;
+    font-family:sans-serif;
+    color: #fff;
+    width: 100%;
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content h3{
+    text-transform: capitalize;
+    line-height: 1;
+    font-weight: bold;
+    font-size:0.75rem ;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 0.5;
+    font-size: 0.5rem;
+}
+#content {
+    width:40%;
+    height:fit-content;
+    position:relative;
+    top:15px;
+    left:28%;
+    text-align: left; 
+    align-items: center;
+    justify-content: center;
+    border:solid #CACACA 1px; 
+    border-radius: 30px;
+    border-spacing: 10px;
+    padding: 30px;
+    background: #FFF;
+    box-shadow: 0 2px 4px rgba(41, 40, 40, 0.1);
+}
+@media screen and (max-height: 880px) {
+    #content{
+        left:23%;
+        width:50%;
+        height:60%;
+        overflow: scroll;
+    }
+}
+header {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+    display:contents;
+    margin-bottom: 5px;
+}
+.userInput {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;}
+#submit {
+     background-color: #2a6ee3; 
+     color: white; 
+     padding: 10px 20px; 
+     border: none; 
+     border-radius: 4px; 
+     font-size: 1.25rem; 
+     cursor:pointer;}
+#submit:hover {background-color:#0a579a;}
+#subButton {
+    text-align: center;
+    margin-bottom: 15px;
+}
