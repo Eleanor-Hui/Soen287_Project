@@ -168,7 +168,7 @@ footer{
 }
 @media screen and (max-height: 880px) {
     #content{
-        overflow: scroll;
+        overflow-y: scroll;
         height:65%;
     }
 }
@@ -241,12 +241,27 @@ td {
     text-align: center;
     margin-top:30px;
 }
-#submit {
-    background-color: #2a6ee3; 
+.submit {
     color: white; 
     padding: 10px 20px; 
     border: none; 
     border-radius: 4px; 
     font-size: 1.25rem; 
-    cursor:pointer;}
-#submit:hover {background-color:#0a579a;}
+    cursor:pointer;
+}
+#submit {
+    background-color: #2a6ee3; 
+    float:left;
+    margin-left: 110px;
+  }
+#submit:hover {
+    background-color:#0a579a;
+}
+#remove {
+    background-color: rgb(160, 42, 42);
+    float:right;
+    margin-right: 16%;
+}
+#remove:hover {
+    background-color:rgb(94, 18, 18);
+}
