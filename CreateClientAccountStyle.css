@@ -127,7 +127,7 @@ footer{
 }
 @media screen and (max-height: 880px) {
     #content{
-        overflow: scroll;
+        overflow-y: scroll;
     }
 }
 header {
